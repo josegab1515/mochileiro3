@@ -42,6 +42,9 @@ export class HomeComponent implements OnInit {
     this.adicionarCard();
     this.adicionarCard();
     this.adicionarCard();
+    this.adicionarCard();
+    this.adicionarCard();
+    this.adicionarCard();
 
 
   }
