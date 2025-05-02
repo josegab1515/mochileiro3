@@ -35,43 +35,37 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe(() => {
-
       this.rotaAtual = this.router.url;
     });
-
-    this.adicionarCard();
-    this.adicionarCard();
-    this.adicionarCard();
-    this.adicionarCard();
-    this.adicionarCard();
-    this.adicionarCard();
-
-
+  
+    const coresFixas = ['#E2F4C5', '#EEE7DA', '#A5DD9B', '#C5EBAA', '#FFFFDD', '#AFC8AD'];
+  
+    for (let i = 0; i < 6; i++) {
+      this.adicionarCard(coresFixas[i]);
+    }
   }
-
-  adicionarCard(){
-    const corAleatoria = this.geralCorAlet();
-
-    const novoCard ={
+  
+  adicionarCard(cor?: string) {
+    const corFinal = cor || this.geralCorAlet();
+  
+    const novoCard = {
       nome: `Termo ${this.contadorCard}`,
       numero: this.contadorCard,
-      cor: corAleatoria
-    }
-
+      cor: corFinal
+    };
+  
     this.cards.push(novoCard);
     this.contadorCard++;
-    
   }
-
-  geralCorAlet(): String{
-    const caracteres ='0123456789ABCDEF';
-    let cor ='#';
-    for(let i = 0; i<6;i++){
-      cor += caracteres[Math.floor(Math.random()*16)]
+  
+  geralCorAlet(): string {
+    const caracteres = '0123456789ABCDEF';
+    let cor = '#';
+    for (let i = 0; i < 6; i++) {
+      cor += caracteres[Math.floor(Math.random() * 16)];
     }
     return cor;
   }
-
   animarBotao(event: Event) {
     const botao = event.target as HTMLElement;
     botao.classList.add('pulsar');
