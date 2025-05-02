@@ -1,0 +1,62 @@
+<body>
+    <div class="container-fluid defaultMargin">
+        <div class="container loginPage">
+            <div>
+                <img src="\loginImgs\Book lover-bro 2.png" alt="" class="img-fluid pessoaEstuda">
+            </div>
+            <div class="formsLogin">
+                <div class="loginTitulo">
+                    <p>Cadastre-se</p>
+                </div>
+                <div class="forms">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" aria-describedby="emailHe" placeholder="Nome" required>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Digite seu e-mail" required>
+
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="exampleInputPassword1" class="form-label">Senha</label>
+                        <div class="input-group">
+                            <input class="form-control" id="senha" placeholder="Digite sua senha"
+                            [type]="visibilidadeSenha ? 'text' : 'password'">
+                            <span role="button" tabindex="0" class="input-group-text bg-white btn-active"
+                            (click)="mostrarSenha()">
+                            <i [class]="visibilidadeSenha ? 'bi bi-unlock' : 'bi bi-lock'"></i>
+
+                        </span>
+                        </div>
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="exampleInputPassword1" class="form-label">Confirmar Senha</label>
+                        <div class="input-group">
+                            <input class="form-control" id="senha" placeholder="Digite sua senha"
+                            [type]="visibilidadeSenha ? 'text' : 'password'">
+                            <span role="button" tabindex="0" class="input-group-text bg-white btn-active"
+                            (click)="mostrarSenha()">
+                            <i [class]="visibilidadeSenha ? 'bi bi-unlock' : 'bi bi-lock'"></i>
+
+                        </span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary">
+                        <a routerLink="/home">cadastrar</a>
+                    </button>
+
+                    <div class="cadastrar">
+                        <p>Possui conta? <a routerLink="">Entrar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
