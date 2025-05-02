@@ -39,6 +39,7 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    transition: all 0.3s ease;
 }
 
 .offcanvas-body li a {
@@ -47,9 +48,16 @@ header {
 }
 
 .active {
-    color: #21BC6B;
+    font-size: 18px;
+    text-decoration: underline;
+    color: yellow !important;
 }
+  
+li.active {
+    font-size: 18px;
+    font-weight: bold;
 
+}
 .navbar-brand {
     display: flex;
     flex-direction: row;

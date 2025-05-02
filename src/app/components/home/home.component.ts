@@ -75,6 +75,6 @@ export class HomeComponent implements OnInit {
   
     setTimeout(() => {
       botao.classList.remove('pulsar');
-    }, 300); // tempo da animação (300ms)
+    }, 300); 
   }
 }
